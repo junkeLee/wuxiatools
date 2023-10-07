@@ -1,0 +1,12 @@
+.nut-cell-group__title {
+  margin-top: 0 !important;
+}
+
+.nut-table {
+  font-size: var(--nutui-font-size-2, 12px) !important;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}

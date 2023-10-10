@@ -1,6 +1,5 @@
-import { Cell } from '@nutui/nutui-react-taro';
-import { Right } from '@nutui/icons-react-taro';
-import PageContainer from '@/components/PageContainer';
+import Taro from '@tarojs/taro';
+import { PageContainer, ProGroupList } from '@/components';
 import { list } from './data';
 
 import './index.scss';
@@ -8,13 +7,12 @@ import './index.scss';
 const Shenbing = () => {
   return (
     <PageContainer noPadding>
-      {list.map(group => (
-        <Cell.Group key={group.id} title={group.name}>
-          {group.children.map(item => (
-            <Cell key={item.id} title={item.name} extra={<Right />} />
-          ))}
-        </Cell.Group>
-      ))}
+      <ProGroupList
+        list={list}
+        onItemChange={item => {
+          Taro.navigateTo({ url: `/pages/shenbing/detail/index?id=${item?.id}`});
+        }}
+      />
     </PageContainer>
   );
 };

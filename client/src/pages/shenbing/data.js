@@ -44,6 +44,7 @@ export const detailList = [
       { name: '第四章', value: '力道增加1%' }
     ],
     spends: {
+      title: '消耗表',
       columns: [
         { title: '章-节', key: 'chapter' },
         { title: '材质', key: 'material' },
@@ -60,6 +61,7 @@ export const detailList = [
       ]
     },
     skills: {
+      title: '技能表',
       columns: [
         { title: '技能重数', key: 'level' },
         { title: '缘材进', key: 'yuancai' }
@@ -72,6 +74,7 @@ export const detailList = [
       ]
     },
     props: {
+      title: '属性表',
       columns: [
         { title: '章-节', key: 'chapter' },
         { title: '花期之谱', key: 'huaqizhipu' },

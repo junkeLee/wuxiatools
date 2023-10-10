@@ -30,6 +30,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "经纬列表",
+          "pathName": "pages/jingwei/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "经纬详情",
+          "pathName": "pages/jingwei/detail/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

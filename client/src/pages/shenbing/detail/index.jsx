@@ -1,4 +1,4 @@
-import { View } from '@tarojs/components';
+import Taro from '@tarojs/taro';
 import { PageContainer, ProDetailList, ProTable } from '@/components';
 import { detailList } from '../data';
 
@@ -8,15 +8,9 @@ const Detail = () => {
 
   const detail = detailList.find(i => i.id === 1);
 
-  const renderValueList = list => {
-    return (
-      <View className='flex-column'>
-        {list.map((item, index) => (
-          <View key={index}>{item.name}: {item.value}</View>
-        ))}
-      </View>
-    );
-  };
+  Taro.setNavigationBarTitle({
+    title: detail.name
+  });
 
   const list = [
     { label: '品质', value: detail.quality },
@@ -25,24 +19,8 @@ const Detail = () => {
     { label: '缘材初', value: detail.totalYuanCaiChu },
     { label: '缘材进', value: detail.totalYuanCaiJin },
     { label: '缘材深', value: detail.totalYuanCaiShen || '-' },
-    { label: '满重属性', value: renderValueList(detail.totalProps) },
-    { label: '技能加成', value: renderValueList(detail.totalSkills) },
-  ];
-
-  const tables = [
-    {
-      title: '消耗表',
-      props: detail.spends
-    },
-    
-    {
-      title: '属性表',
-      props: detail.props
-    },
-    {
-      title: '技能表',
-      props: detail.skills
-    },
+    { label: '满重属性', value: detail.totalProps },
+    { label: '技能加成', value: detail.totalSkills },
   ];
 
   return (
@@ -50,13 +28,9 @@ const Detail = () => {
       <ProDetailList
         list={list}
       />
-      {tables.map((table, index) => (
-        <ProTable
-          key={index}
-          title={table.title}
-          {...table.props}
-        />
-      ))}
+      <ProTable
+        tables={[detail.spends, detail.props, detail.skills]}
+      />
     </PageContainer>
   );
 };

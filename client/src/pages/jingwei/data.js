@@ -1,37 +1,37 @@
 export const list = [
   {
     id: 1,
-    name: '天',
+    name: '白',
     children: [
       {
         id: 1,
-        name: '皇天',
+        name: '角·应劫',
         quality: 'jin',
-        desc: '力道、洞察、根骨'
+        desc: '外攻、内攻、命中'
       }
     ]
   },
   {
     id: 2,
-    name: '地',
+    name: '黑',
     children: [
       {
         id: 2,
-        name: '厚土',
+        name: '角·净活',
         quality: 'jin',
-        desc: '身法、气劲、根骨'
+        desc: '外防、内防、格挡'
       }
     ]
   },
   {
     id: 3,
-    name: '混沌',
+    name: '橙',
     children: [
       {
         id: 3,
-        name: '道心',
-        quality: 'jin',
-        desc: '命中、会心、外攻、内攻'
+        name: '星元',
+        quality: 'cheng',
+        desc: '破伤、灼魂'
       }
     ]
   }
@@ -40,8 +40,8 @@ export const list = [
 export const detailList = [
   {
     id: 1,
-    name: '皇天',
-    type: '天',
+    name: '角·应劫',
+    type: '白',
     quality: '金',
     count: 3,
     spend: 200,
@@ -49,16 +49,16 @@ export const detailList = [
       title: '属性表',
       columns: [
         { title: '等级', key: 'level' },
-        { title: '洞察', key: 'dongcha' },
-        { title: '力道', key: 'lidao' },
-        { title: '根骨', key: 'gengu' }
+        { title: '外攻', key: 'waigong' },
+        { title: '外防', key: 'waifang' },
+        { title: '命中', key: 'mingzhong' }
       ],
       data: [
         {
           level: 1,
-          dongcha: 4,
-          lidao: 4,
-          gengu: 4
+          waigong: 4,
+          waifang: 2,
+          mingzhong: 2
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "client/dist/",
-  "cloudfunctionRoot": "cloud/functions/",
+  "cloudfunctionRoot": "cloudfunctions/",
   "projectname": "wuxiatools",
   "description": "天刀记事本",
   "appid": "wx61a44a3866add9ad",
@@ -29,5 +29,6 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }

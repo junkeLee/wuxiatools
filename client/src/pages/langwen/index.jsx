@@ -1,10 +1,22 @@
+import { useEffect } from 'react';
 import Taro from '@tarojs/taro';
+import { connect } from 'react-redux';
 import { PageContainer, ProGroupList } from '@/components';
-import { list } from './data';
 
 import './index.scss';
 
-const Langwen = () => {
+const Langwen = ({ dispatch, list }) => {
+
+  useEffect(() => {
+    getList();
+  }, []);
+
+  const getList = async() => {
+    await dispatch({
+      type: 'langwen/getList'
+    });
+  };
+
   return (
     <PageContainer noPadding>
       <ProGroupList
@@ -17,4 +29,6 @@ const Langwen = () => {
   );
 };
 
-export default Langwen;
+export default connect(({ langwen }) => ({
+  ...langwen
+}))(Langwen);

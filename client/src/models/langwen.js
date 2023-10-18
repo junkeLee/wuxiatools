@@ -70,9 +70,18 @@ export default {
     ]
   },
   effects: {
-    *getList(_, { call, put }) {
+    *getList(_, { call, put, select }) {
+      const list = yield select(({ langwen }) => langwen?.list);
+      if (list?.length > 0) return list;
+
       const res = yield call(getList);
-      console.log('res', res);
+      yield put({
+        type: 'save',
+        payload: {
+          list: res?.data
+        }
+      });
+      return list;
     },
     *getDetail(_, { call, put }) {
 

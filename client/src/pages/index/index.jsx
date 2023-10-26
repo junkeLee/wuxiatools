@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro';
 import { PageContainer } from '@/components';
 import { Grid } from '@nutui/nutui-react-taro';
-import { Dongdong } from '@nutui/icons-react-taro';
+import toast from '@/utils/toast';
 import { menus } from './helper';
 
 import './index.scss';
@@ -14,8 +14,14 @@ function Index() {
           <Grid.Item
             key={item.code}
             text={item.name}
-            onClick={() => Taro.navigateTo({ url: item.path })}
-          ><Dongdong /></Grid.Item>
+            onClick={() => {
+              if (!item.path) {
+                toast.message('功能开发中，敬请期待');
+                return;
+              }
+              Taro.navigateTo({ url: item.path });
+            }}
+          ></Grid.Item>
         ))}
       </Grid>
     </PageContainer>

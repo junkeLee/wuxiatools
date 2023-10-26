@@ -7,16 +7,16 @@ export const menus = [
   {
     code: 'shenbing',
     name: '神兵',
-    path: '/pages/shenbing/index'
+    path: null
   },
   {
     code: 'jingwei',
     name: '经纬',
-    path: '/pages/jingwei/index'
+    path: null
   },
   {
     code: 'bianshi',
     name: '砭石',
-    path: '/pages/bianshi/index'
+    path: null
   }
 ];

@@ -7,6 +7,7 @@ const App = props => {
     Taro.cloud.init({
       env: 'wuxiatools-prod-1gsq3lya4c3c861d'
     });
+    Taro.globalData = {};
   });
 
   return props.children;

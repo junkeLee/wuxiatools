@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Taro from '@tarojs/taro';
+import Taro, { useShareAppMessage } from '@tarojs/taro';
 import _ from 'lodash';
 import { PageContainer, ProGroupList } from '@/components';
 import { getList } from '@/services/langwen';
@@ -22,9 +22,13 @@ const Langwen = () => {
     const res = await getList();
     if (res?.code !== 200) return;
     _.set(Taro, 'globalData.langwenList', res?.data);
-    console.log('taro', Taro);
     setList(transformListToGroup(res?.data));
   };
+
+  useShareAppMessage(() => ({
+    title: '琅纹列表',
+    path: '/pages/langwen/index'
+  }));
 
   return (
     <PageContainer noPadding>

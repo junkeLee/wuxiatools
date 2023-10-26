@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Taro from '@tarojs/taro';
+import Taro, { useShareAppMessage } from '@tarojs/taro';
 import { PageContainer, ProDetailList, ProTable } from '@/components';
 import { getDetail } from '@/services/langwen';
 import { setNavigatorTitle } from '@/utils/util';
@@ -27,7 +27,12 @@ const Detail = () => {
     { label: '品质', value: detail?.quality },
     { label: '满级总消耗个数', value: detail?.count },
     { label: '满级总消耗碎银', value: detail?.spend }
-  ]
+  ];
+
+  useShareAppMessage(() => ({
+    title: detail?.name,
+    path: `/pages/langwen/detail/index?id=${id}`
+  }));
 
   return (
     <PageContainer>

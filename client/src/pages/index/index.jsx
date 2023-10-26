@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro';
+import Taro, { useShareAppMessage } from '@tarojs/taro';
 import { PageContainer } from '@/components';
 import { Grid } from '@nutui/nutui-react-taro';
 import toast from '@/utils/toast';
@@ -7,6 +7,12 @@ import { menus } from './helper';
 import './index.scss';
 
 function Index() {
+  
+  useShareAppMessage(() => ({
+    title: '天刀资料站',
+    path: '/pages/index/index'
+  }));
+
   return (
     <PageContainer>
       <Grid>

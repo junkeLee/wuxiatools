@@ -1,20 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Taro from '@tarojs/taro';
-import { connect } from 'react-redux';
 import { PageContainer, ProGroupList } from '@/components';
+import { getList } from '@/services/langwen';
 
 import './index.scss';
+import { transformListToGroup } from './helper';
 
-const Langwen = ({ dispatch, list }) => {
+const Langwen = () => {
+  const [list, setList] = useState([]);
 
   useEffect(() => {
-    getList();
+    getData();
   }, []);
 
-  const getList = async() => {
-    await dispatch({
-      type: 'langwen/getList'
-    });
+  const getData = async() => {
+    const res = await getList();
+    if (res?.code !== 200) return;
+
+    setList(transformListToGroup(res?.data));
   };
 
   return (
@@ -22,13 +25,11 @@ const Langwen = ({ dispatch, list }) => {
       <ProGroupList
         list={list}
         onItemChange={item => {
-          Taro.navigateTo({ url: `/pages/langwen/detail/index?id=${item.id}` });
+          Taro.navigateTo({ url: `/pages/langwen/detail/index?id=${item._id}` });
         }}
       />
     </PageContainer>
   );
 };
 
-export default connect(({ langwen }) => ({
-  ...langwen
-}))(Langwen);
+export default Langwen;

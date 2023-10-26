@@ -1,21 +1,32 @@
+import { useEffect, useState } from 'react';
 import Taro from '@tarojs/taro';
 import { PageContainer, ProDetailList, ProTable } from '@/components';
-import { detailList } from '../data';
+import { getDetail } from '@/services/langwen';
+import { setNavigatorTitle } from '@/utils/util';
 
 import './index.scss';
 
 const Detail = () => {
-  const detail = detailList.find(i => i.id === 1);
+  const [detail, setDetail] = useState({});
+  const { id } = Taro.getCurrentInstance().router.params;
 
-  Taro.setNavigationBarTitle({
-    title: detail.name
-  });
+  useEffect(() => {
+    getData(id);
+  }, []);
+
+  const getData = async(id) => {
+    const res = await getDetail(id);
+    if (res?.code !== 200) return;
+
+    setDetail(res?.data);
+    setNavigatorTitle(res?.data?.name);
+  };
 
   const list = [
-    { label: '类型', value: detail.type },
-    { label: '品质', value: detail.quality },
-    { label: '满级总消耗个数', value: detail.count },
-    { label: '满级总消耗碎银', value: detail.spend }
+    { label: '类型', value: detail?.type },
+    { label: '品质', value: detail?.quality },
+    { label: '满级总消耗个数', value: detail?.count },
+    { label: '满级总消耗碎银', value: detail?.spend }
   ]
 
   return (

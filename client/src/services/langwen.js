@@ -8,7 +8,7 @@ export const getList = async() => {
 
 export const getDetail = async(id) => {
   return await request('detail', {
-    database: 'langwenDetail',
+    database: 'langwenDetailList',
     id
   });
 };

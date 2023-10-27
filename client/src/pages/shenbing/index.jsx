@@ -1,10 +1,30 @@
-import Taro from '@tarojs/taro';
+import { useEffect, useState } from 'react';
+import Taro, { useShareAppMessage } from '@tarojs/taro';
 import { PageContainer, ProGroupList } from '@/components';
-import { list } from './data';
+import { getList } from '@/services/shenbing';
+import { transformListToGroup } from './helper';
 
 import './index.scss';
 
 const Shenbing = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async() => {
+    const res = await getList();
+    if (res?.code !== 200) return;
+
+    setList(transformListToGroup(res?.data));
+  };
+
+  useShareAppMessage(() => ({
+    title: '神兵列表',
+    path: '/pages/shenbing/index'
+  }));
+
   return (
     <PageContainer noPadding>
       <ProGroupList

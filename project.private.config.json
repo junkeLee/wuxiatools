@@ -4,20 +4,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "琅纹列表",
-          "pathName": "pages/langwen/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "琅纹详情",
-          "pathName": "pages/langwen/detail/index",
-          "query": "id=1",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
           "name": "神兵列表",
           "pathName": "pages/shenbing/index",
           "query": "",

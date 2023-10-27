@@ -7,7 +7,7 @@ export const menus = [
   {
     code: 'shenbing',
     name: '神兵',
-    path: null
+    path: '/pages/shenbing/index'
   },
   {
     code: 'jingwei',

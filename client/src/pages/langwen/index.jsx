@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Taro, { useShareAppMessage } from '@tarojs/taro';
-import _ from 'lodash';
 import { PageContainer, ProGroupList } from '@/components';
-import { getList } from '@/services/langwen';
+import { getList } from '@/services';
+import { DB } from '@/utils/constants';
 import { transformListToGroup } from './helper';
 
 import './index.scss';
@@ -15,13 +15,9 @@ const Langwen = () => {
   }, []);
 
   const getData = async() => {
-    if (Taro.globalData?.langwenList?.length > 0) {
-      setList(transformListToGroup(Taro.globalData?.langwenList));
-      return;
-    }
-    const res = await getList();
+    const res = await getList(DB.LangwenList);
     if (res?.code !== 200) return;
-    _.set(Taro, 'globalData.langwenList', res?.data);
+
     setList(transformListToGroup(res?.data));
   };
 

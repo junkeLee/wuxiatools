@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import Taro, { useShareAppMessage } from '@tarojs/taro';
 import { PageContainer, ProDetailList, ProTable } from '@/components';
-import { getDetail } from '@/services/langwen';
+import { getDetail } from '@/services';
 import { setNavigatorTitle } from '@/utils/util';
+import { DB } from '@/utils/constants';
 
 import './index.scss';
 
@@ -15,7 +16,7 @@ const Detail = () => {
   }, []);
 
   const getData = async(id) => {
-    const res = await getDetail(id);
+    const res = await getDetail({ database: DB.LangwenDetailList, id });
     if (res?.code !== 200) return;
 
     setDetail(res?.data);
@@ -23,7 +24,7 @@ const Detail = () => {
   };
 
   const list = [
-    { label: '类型', value: detail?.type },
+    { label: '类型', value: detail?.category },
     { label: '品质', value: detail?.quality },
     { label: '满级总消耗个数', value: detail?.count },
     { label: '满级总消耗碎银', value: detail?.spend }

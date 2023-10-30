@@ -238,16 +238,16 @@ const list = [
         { title: '外攻', key: 'waigong' }
       ],
       data: [
-        { level: 1, lidao: 4, mingzhong: '0.6%', waigong: 9 },
-        { level: 2, lidao: 8, mingzhong: '1.2%', waigong: 18 },
-        { level: 3, lidao: 12, mingzhong: '1.8%', waigong: 26 },
-        { level: 4, lidao: 16, mingzhong: '2.4%', waigong: 35 },
-        { level: 5, lidao: 20, mingzhong: '3%', waigong: 44 },
-        { level: 6, lidao: 24, mingzhong: '3.6%', waigong: 53 },
-        { level: 7, lidao: 28, mingzhong: '4.2%', waigong: 62 },
-        { level: 8, lidao: 32, mingzhong: '4.8%', waigong: 70 },
-        { level: 9, lidao: 36, mingzhong: '5.4%', waigong: 79 },
-        { level: 10, lidao: 40, mingzhong: '6%', waigong: 88 }
+        { level: 1, dongcha: 4, mingzhong: '0.6%', waigong: 9 },
+        { level: 2, dongcha: 8, mingzhong: '1.2%', waigong: 18 },
+        { level: 3, dongcha: 12, mingzhong: '1.8%', waigong: 26 },
+        { level: 4, dongcha: 16, mingzhong: '2.4%', waigong: 35 },
+        { level: 5, dongcha: 20, mingzhong: '3%', waigong: 44 },
+        { level: 6, dongcha: 24, mingzhong: '3.6%', waigong: 53 },
+        { level: 7, dongcha: 28, mingzhong: '4.2%', waigong: 62 },
+        { level: 8, dongcha: 32, mingzhong: '4.8%', waigong: 70 },
+        { level: 9, dongcha: 36, mingzhong: '5.4%', waigong: 79 },
+        { level: 10, dongcha: 40, mingzhong: '6%', waigong: 88 }
       ]
     }
   },

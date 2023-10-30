@@ -1,12 +1,12 @@
 import Taro from '@tarojs/taro';
 import { PageContainer, ProDetailList, ProTable } from '@/components';
-import { detailList } from '../data';
+// import { detailList } from '../data';
 
 import './index.scss';
 
 const Detail = () => {
 
-  const detail = detailList.find(i => i.id === 1);
+  const detail = {};
 
   Taro.setNavigationBarTitle({
     title: detail.name

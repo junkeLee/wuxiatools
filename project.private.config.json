@@ -4,8 +4,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "神兵列表",
-          "pathName": "pages/shenbing/index",
+          "name": "琅纹列表",
+          "pathName": "pages/langwen/index",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -13,20 +13,6 @@
         {
           "name": "神兵详情",
           "pathName": "pages/shenbing/detail/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "经纬列表",
-          "pathName": "pages/jingwei/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "经纬详情",
-          "pathName": "pages/jingwei/detail/index",
           "query": "",
           "launchMode": "default",
           "scene": null

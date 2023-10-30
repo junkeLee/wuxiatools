@@ -5,7 +5,7 @@ const list = [
     code: 'tian-ri',
     category: 'tian',
     quality: 'lan',
-    desc: '力道'
+    desc: '属性：力道'
   },
   {
     _id: 2,
@@ -13,7 +13,7 @@ const list = [
     code: 'tian-yue',
     category: 'tian',
     quality: 'lan',
-    desc: '洞察'
+    desc: '属性：洞察'
   },
   {
     _id: 3,
@@ -21,7 +21,7 @@ const list = [
     code: 'tian-yun',
     category: 'tian',
     quality: 'zi',
-    desc: '力道、洞察'
+    desc: '属性：力道、洞察'
   },
   {
     _id: 4,
@@ -29,7 +29,7 @@ const list = [
     code: 'tian-yu',
     category: 'tian',
     quality: 'zi',
-    desc: '气劲、根骨'
+    desc: '属性：气劲、根骨'
   },
   {
     _id: 5,
@@ -37,7 +37,7 @@ const list = [
     code: 'tian-feng',
     category: 'tian',
     quality: 'zi',
-    desc: '洞察、根骨'
+    desc: '属性：洞察、根骨'
   },
   {
     _id: 6,
@@ -45,7 +45,7 @@ const list = [
     code: 'tian-hong',
     category: 'tian',
     quality: 'zi',
-    desc: '力道、外攻'
+    desc: '属性：力道、外攻'
   },
   {
     _id: 7,
@@ -53,7 +53,7 @@ const list = [
     code: 'tian-lei',
     category: 'tian',
     quality: 'zi',
-    desc: '气劲、内攻'
+    desc: '属性：气劲、内攻'
   },
   {
     _id: 8,
@@ -61,7 +61,7 @@ const list = [
     code: 'tian-huangtian',
     category: 'tian',
     quality: 'jin',
-    desc: '力道、洞察、根骨'
+    desc: '属性：力道、洞察、根骨'
   },
   {
     _id: 9,
@@ -69,7 +69,7 @@ const list = [
     code: 'tian-xuanzhou',
     category: 'tian',
     quality: 'jin',
-    desc: '洞察、命中、外攻'
+    desc: '属性：洞察、命中、外攻'
   },
   {
     _id: 10,
@@ -77,7 +77,7 @@ const list = [
     code: 'tian-yinhe',
     category: 'tian',
     quality: 'jin',
-    desc: '根骨、外攻、内攻'
+    desc: '属性：根骨、外攻、内攻'
   },
   {
     _id: 11,
@@ -85,7 +85,7 @@ const list = [
     code: 'di-shan',
     category: 'di',
     quality: 'lan',
-    desc: '气劲'
+    desc: '属性：气劲'
   },
   {
     _id: 12,
@@ -93,7 +93,7 @@ const list = [
     code: 'di-shui',
     category: 'di',
     quality: 'lan',
-    desc: '身法'
+    desc: '属性：身法'
   },
   {
     _id: 13,
@@ -101,7 +101,7 @@ const list = [
     code: 'di-mu',
     category: 'di',
     quality: 'zi',
-    desc: '气劲、身法'
+    desc: '属性：气劲、身法'
   },
   {
     _id: 14,
@@ -109,7 +109,7 @@ const list = [
     code: 'di-tu',
     category: 'di',
     quality: 'zi',
-    desc: '力道、根骨'
+    desc: '属性：力道、根骨'
   },
   {
     _id: 15,
@@ -117,7 +117,7 @@ const list = [
     code: 'di-jin',
     category: 'di',
     quality: 'zi',
-    desc: '身法、根骨'
+    desc: '属性：身法、根骨'
   },
   {
     _id: 16,
@@ -125,7 +125,7 @@ const list = [
     code: 'di-ze',
     category: 'di',
     quality: 'zi',
-    desc: '身法、气血'
+    desc: '属性：身法、气血'
   },
   {
     _id: 17,
@@ -133,7 +133,7 @@ const list = [
     code: 'di-sha',
     category: 'di',
     quality: 'zi',
-    desc: '气劲、内攻'
+    desc: '属性：气劲、内攻'
   },
   {
     _id: 18,
@@ -141,7 +141,7 @@ const list = [
     code: 'di-houtu',
     category: 'di',
     quality: 'jin',
-    desc: '气劲、身法、根骨'
+    desc: '属性：气劲、身法、根骨'
   },
   {
     _id: 19,
@@ -149,7 +149,7 @@ const list = [
     code: 'di-zhuchuan',
     category: 'di',
     quality: 'jin',
-    desc: '身法、格挡、内防'
+    desc: '属性：身法、格挡、内防'
   },
   {
     _id: 20,
@@ -157,7 +157,7 @@ const list = [
     code: 'di-meilin',
     category: 'di',
     quality: 'jin',
-    desc: '根骨、气血、外防'
+    desc: '属性：根骨、气血、外防'
   },
   {
     _id: 21,
@@ -165,7 +165,7 @@ const list = [
     code: 'hundun-shangqing',
     category: 'hundun',
     quality: 'zi',
-    desc: '外攻、内攻、命中'
+    desc: '属性：外攻、内攻、命中'
   },
   {
     _id: 22,
@@ -173,7 +173,7 @@ const list = [
     code: 'hundun-taiqing',
     category: 'hundun',
     quality: 'zi',
-    desc: '外防、内防、格挡'
+    desc: '属性：外防、内防、格挡'
   },
   {
     _id: 23,
@@ -181,7 +181,7 @@ const list = [
     code: 'hundun-daoxin',
     category: 'hundun',
     quality: 'jin',
-    desc: '会心、外攻、内攻'
+    desc: '属性：会心、外攻、内攻'
   },
   {
     _id: 24,
@@ -189,7 +189,7 @@ const list = [
     code: 'hundun-shenren',
     category: 'hundun',
     quality: 'jin',
-    desc: '韧劲、外防、内防'
+    desc: '属性：韧劲、外防、内防'
   },
   {
     _id: 25,
@@ -197,6 +197,6 @@ const list = [
     code: 'hundun-lingxiao',
     category: 'hundun',
     quality: 'jin',
-    desc: '命中、格挡、会伤、气血'
+    desc: '属性：命中、格挡、会伤、气血'
   }
 ];

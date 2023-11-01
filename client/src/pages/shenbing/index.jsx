@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import Taro, { useShareAppMessage } from '@tarojs/taro';
 import { PageContainer, ProGroupList } from '@/components';
 import { getList } from '@/services';
-import { DB } from '@/utils/constants';
-import { transformListToGroup } from './helper';
+import { DB, qualityGroups } from '@/utils/constants';
 
 import './index.scss';
+import { buildGroup } from '@/utils/util';
 
 const Shenbing = () => {
   const [list, setList] = useState([]);
@@ -15,10 +15,11 @@ const Shenbing = () => {
   }, []);
 
   const getData = async() => {
-    const res = await getList(DB.LangwenList);
+    const res = await getList(DB.ShenbingList);
     if (res?.code !== 200) return;
 
-    setList(transformListToGroup(res?.data));
+    const groups = buildGroup(res?.data, qualityGroups);
+    setList(groups);
   };
 
   useShareAppMessage(() => ({
